@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333333;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #1a252f;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #555555;
+    font-size: 1rem;
+}
+
+/* Кнопка "Показати всі вакансії" теж з червоним фоном і білим текстом */
+.reset-btn {
+    margin-top: 18px;
+    padding: 10px 22px;
+    background-color: #e60000;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(230, 0, 0, 0.3);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.reset-btn:hover {
+    background-color: #b30000;
+}
+
+.reset-btn:active {
+    transform: scale(0.96);
+}
+
+.jobs-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.job-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, opacity 0.4s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: #1900ff;
+}
+
+/* КНОПКА В КАРТЦІ: ЧЕРВОНИЙ ФОН + БІЛИЙ ТЕКСТ */
+.badge-btn {
+    align-self: flex-start;
+    background-color: #0019f9; /* Яскравий червоний фон */
+    color: #ffffff;            /* Білий текст */
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(31, 0, 230, 0.35);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.badge-btn:hover {
+    background-color: #2200ff; /* Темно-червоний при наведенні */
+    transform: translateY(-1px);
+}
+
+.badge-btn:active {
+    transform: scale(0.95);
+}
+
+.job-card h2 {
+    font-size: 1.3rem;
+    color: #1a252f;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-size: 0.95rem;
+    color: #666666;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.salary {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #15803d;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+.click-hint {
+    font-size: 0.8rem;
+    color: #0a02ff;
+    font-weight: 600;
+    text-align: right;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+}
+
+.job-card:hover .click-hint {
+    opacity: 1;
+}
+
+/* Анімація зникнення картки */
+.job-card.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+/* Фіксована кнопка повернення в правому нижньому куті */
+.restore-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    padding: 12px 22px;
+    background-color: #16a34a; /* Контрастний зелений фон */
+    color: #ffffff;            /* Білий текст */
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.restore-btn:hover {
+    background-color: #15803d;
+    transform: translateY(-3px);
+}
+
+.restore-btn:active {
+    transform: scale(0.95);
+}

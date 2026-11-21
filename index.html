@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Актуальні вакансії (9 карток)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Актуальні вакансії</h1>
+        <p>Натисніть на червону кнопку формату для фільтру або на картку, щоб видалити її</p>
+        <button id="reset-btn" class="reset-btn" style="display: none;">Показати всі вакансії</button>
+    </header>
+
+    <main class="jobs-container" id="jobs-container">
+        <!-- Картка 1 -->
+        <div class="job-card" data-type="remote">
+            <button type="button" class="badge-btn" data-filter="remote">Віддалено</button>
+            <h2>Frontend Developer (Junior)</h2>
+            <p class="company">TechStart Ukraine</p>
+            <p class="salary">25 000 – 35 000 грн</p>
+            <p class="description">Шукаємо розробника зі знанням HTML, CSS та базового JavaScript для створення сучасних інтерфейсів.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+
+        <!-- Картка 2 -->
+        <div class="job-card" data-type="office">
+            <button type="button" class="badge-btn" data-filter="office">Офіс / Київ</button>
+            <h2>UI/UX Дизайнер</h2>
+            <p class="company">Creative Studio</p>
+            <p class="salary">30 000 – 45 000 грн</p>
+            <p class="description">Розробка прототипів, дизайн мобільних додатків та веб-сайтів у Figma. Досвід роботи від 1 року.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+
+        <!-- Картка 3 -->
+        <div class="job-card" data-type="hybrid">
+            <button type="button" class="badge-btn" data-filter="hybrid">Гібрид / Львів</button>
+            <h2>SMM-менеджер</h2>
+            <p class="company">BrandBoost</p>
+            <p class="salary">20 000 – 28 000 грн</p>
+            <p class="description">Ведення сторінок в Instagram та TikTok, створення контент-плану, запуск таргетованої реклами.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+
+        <!-- Картка 4 -->
+        <div class="job-card" data-type="remote">
+            <button type="button" class="badge-btn" data-filter="remote">Віддалено</button>
+            <h2>Копірайтер</h2>
+            <p class="company">MediaContent</p>
+            <p class="salary">18 000 – 25 000 грн</p>
+            <p class="description">Написання статтей для блогів, текстів для лендінгів та постів у соціальні мережі. Грамотна українська мова.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+
+        <!-- Картка 5 -->
+        <div class="job-card" data-type="office">
+            <button type="button" class="badge-btn" data-filter="office">Офіс / Харків</button>
+            <h2>Менеджер з продажу</h2>
+            <p class="company">SalesPro</p>
+            <p class="salary">22 000 + % від продажів</p>
+            <p class="description">Робота з теплою базою клієнтів, консультації щодо послуг компанії та укладання договорів.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+
+        <!-- Картка 6 -->
+        <div class="job-card" data-type="remote">
+            <button type="button" class="badge-btn" data-filter="remote">Віддалено</button>
+            <h2>QA Engineer (Тестувальник)</h2>
+            <p class="company">SoftQuality</p>
+            <p class="salary">28 000 – 40 000 грн</p>
+            <p class="description">Ручне тестування веб-додатків, написання тест-кейсів та баг-репортів. Розуміння клієнт-серверної архітектури.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+
+        <!-- Картка 7 -->
+        <div class="job-card" data-type="hybrid">
+            <button type="button" class="badge-btn" data-filter="hybrid">Гібрид / Одеса</button>
+            <h2>Project Manager</h2>
+            <p class="company">AgileTeam</p>
+            <p class="salary">35 000 – 50 000 грн</p>
+            <p class="description">Координація команди розробників, ведення завдань у Jira та спілкування із замовниками.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+
+        <!-- Картка 8 -->
+        <div class="job-card" data-type="remote">
+            <button type="button" class="badge-btn" data-filter="remote">Віддалено</button>
+            <h2>Python Backend Developer</h2>
+            <p class="company">DataCore</p>
+            <p class="salary">40 000 – 60 000 грн</p>
+            <p class="description">Розробка API на Django/FastAPI, робота з базами даних PostgreSQL та оптимізація запитів.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+
+        <!-- Картка 9 -->
+        <div class="job-card" data-type="office">
+            <button type="button" class="badge-btn" data-filter="office">Офіс / Дніпро</button>
+            <h2>HR-менеджер (Рекрутер)</h2>
+            <p class="company">PeopleFirst</p>
+            <p class="salary">24 000 – 32 000 грн</p>
+            <p class="description">Пошук кандидатів на відкриті вакансії, проведення первинних співбесід та адаптація новачків.</p>
+            <div class="click-hint">Натисніть на картку, щоб закрити</div>
+        </div>
+        <button id="restore-btn" class="restore-btn" style="display: none;">
+    ↩ Повернути картку
+</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
